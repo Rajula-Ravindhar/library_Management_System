@@ -86,9 +86,14 @@ def view_all_books():
 
 def view_all_members():
     curs.execute("SELECT * FROM members;")
+     for row in curs.fetchall():
+        print(row)
+
 
 def view_borrow_records():
     curs.execute('SELECT * FROM borrow_record;')
+     for row in curs.fetchall():
+        print(row)
 
 
 if __name__=='__main__':
